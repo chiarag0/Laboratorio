@@ -5,6 +5,7 @@
 #ifndef LABPROGRAMMAZIONE_NOTIFIER_H
 #define LABPROGRAMMAZIONE_NOTIFIER_H
 
+#include <memory>
 #include "Observer.h"
 #include "Subject.h"
 #include "Chat.h"

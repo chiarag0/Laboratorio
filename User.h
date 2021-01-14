@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <map>
+#include <memory>
 #include "Chat.h"
 
 class Chat;

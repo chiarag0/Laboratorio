@@ -24,5 +24,13 @@ int main() {
 
     chat->addMessage(message3);
 
-    user1.removeChat(user2);
+    std::cout << std::endl << "-----------------------------" << std::endl << std::endl;
+
+    try {
+        chat->readMessage(7);
+    }
+    catch (std::out_of_range &e) {
+        std::cerr << "Out of range error. This mail doesn't exist." << std::endl;
+    }
+
 }
