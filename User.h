@@ -17,6 +17,8 @@ public:
 
     const std::string &getName() const;
 
+    void setName(const std::string &name);
+
     Chat* newChat(const User& user);
 
     void removeChat(const User& user);

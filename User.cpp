@@ -14,6 +14,11 @@ const std::string &User::getName() const {
     return name;
 }
 
+void User::setName(const std::string &name) {
+    this->name = name;
+}
+
+
 void User::removeChat(const User &user) {
     auto itr = chats.find(user.getName());
     chats.erase(itr);
@@ -22,3 +27,4 @@ void User::removeChat(const User &user) {
 User::~User() {
 
 }
+

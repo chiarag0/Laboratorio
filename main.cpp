@@ -13,8 +13,16 @@ int main() {
     Message message1("Marco", "Luca", "Hello, how are you?");
     Message message2("Luca", "Marco", "Hey! It's all ok, what about you?");
     Message message3("Marco", "Luca", "I'm doing great, thank you!");
+
     chat->addMessage(message1);
+
+    std::cout << std::endl << "-----------------------------" << std::endl << std::endl;
+
     chat->addMessage(message2);
+
+    std::cout << std::endl << "-----------------------------" << std::endl << std::endl;
+
     chat->addMessage(message3);
+
     user1.removeChat(user2);
 }

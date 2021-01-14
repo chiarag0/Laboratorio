@@ -8,6 +8,7 @@
 #include <list>
 #include <string>
 #include <vector>
+#include <memory>
 #include "Subject.h"
 #include "Observer.h"
 #include "Message.h"
