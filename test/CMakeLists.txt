@@ -4,8 +4,8 @@ set(CMAKE_CXX_STANDARD 11)
 
 set(GOOGLETEST_VERSION 1.10.0)
 
-add_subdirectory(googletest-master)
-set(gtest_DIR, googletest-master)
+add_subdirectory(googletest-master/googletest)
+set(gtest_DIR, googletest-master/googletest)
 include_directories(${gtest_DIR}/include ${gtest_DIR})
 
 
