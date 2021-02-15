@@ -20,9 +20,11 @@ public:
 
     void setName(const std::string &name);
 
-    Chat* newChat(const User& user);
+    void newChat(const User& user);
 
     void removeChat(const User& user);
+
+    std::shared_ptr<Chat> getChat(std::string c);
 
     auto getChats() const {
         return chats;
@@ -31,7 +33,7 @@ public:
     virtual ~User();
 
 private:
-    std::map<std::string, Chat*> chats;
+    std::map<std::string, std::shared_ptr<Chat> > chats;
     std::string name;
 };
 

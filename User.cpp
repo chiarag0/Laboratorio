@@ -4,10 +4,9 @@
 
 #include "User.h"
 
-Chat* User::newChat(const User &user) {
-    Chat *c = new Chat(this->getName(), user.getName());
+void User::newChat(const User &user) {
+    std::shared_ptr<Chat> c = std::make_shared<Chat>(Chat(this->getName(), user.getName()));
     chats.insert(std::make_pair(user.getName(), c));
-    return c;
 }
 
 const std::string &User::getName() const {
@@ -18,6 +17,9 @@ void User::setName(const std::string &name) {
     this->name = name;
 }
 
+std::shared_ptr<Chat> User::getChat(std::string c) {
+    return this->chats.at(c);
+}
 
 void User::removeChat(const User &user) {
     auto itr = chats.find(user.getName());

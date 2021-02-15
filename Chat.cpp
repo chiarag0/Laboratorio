@@ -43,6 +43,7 @@ void Chat::addMessage(Message &m) {
 
 void Chat::readMessage(int i) {
     if(i > 0 && i < messages.size()) {
+        std::cout << "CHAT BETWEEN" << messages[i].getSender() << "AND" <<  messages[i].getReceiver() << std::endl;
         std::cout <<"Sender: "<< messages[i].getSender() <<", Receiver: "<< messages[i].getReceiver() << std::endl;
         std::cout <<"Text: "<< messages[i].getText() << std::endl;
         messages[i].setRead(true);
@@ -58,6 +59,16 @@ const Message &Chat::getLastMessage() const {
 
 const std::vector<Message> &Chat::getMessages() const {
     return messages;
+
+}
+
+int Chat::getUnread() {
+    int unreadM = 0;
+    for(auto message : messages) {
+        if (message.isRead())
+            unreadM++;
+    }
+    return unreadM;
 }
 
 Chat::~Chat() {

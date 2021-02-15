@@ -28,7 +28,7 @@ void Message::setText(const std::string &text) {
     Message::text = text;
 }
 
-bool Message::getRead() const {
+bool Message::isRead() const {
     return read;
 }
 
@@ -36,7 +36,4 @@ void Message::setRead(bool read) {
     Message::read = read;
 }
 
-Message::~Message() {
-
-}
 

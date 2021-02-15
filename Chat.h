@@ -36,6 +36,8 @@ public:
 
     const Message& getLastMessage() const;
 
+    int getUnread();
+
     const std::vector<Message> &getMessages() const;
 
     void addObserver(Observer* o) override ;

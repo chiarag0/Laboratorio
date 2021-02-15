@@ -11,9 +11,7 @@ class Message {
 public:
     Message(std::string s, std::string r, std::string t, bool rd = false) : sender(s), receiver(r), text(t), read(rd) {}
 
-    virtual ~Message();
-
-    bool getRead() const;
+    bool isRead() const;
 
     void setRead(bool read);
 

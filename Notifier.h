@@ -12,12 +12,12 @@
 
 class Notifier : public Observer {
 public:
-    Notifier(Chat* chat) {
+    Notifier(std::shared_ptr<Chat> chat) {
         chat->addObserver(this);
         this->chat = chat;
     }
 
-    ~Notifier(){
+    virtual ~Notifier(){
         chat->removeObserver(this);
     }
 
@@ -25,7 +25,7 @@ public:
     void display(const Message& message);
 
 private:
-    Chat* chat;
+    std::shared_ptr<Chat> chat;
 };
 
 

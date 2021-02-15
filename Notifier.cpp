@@ -9,7 +9,7 @@ void Notifier::update() {
 }
 
 void Notifier::display(const Message& message) {
-    std::cout << "NEW MESSAGE: " << std::endl;
+    std::cout << "NEW MESSAGE IN CHAT BETWEEN " << message.getSender() << " AND " <<  message.getReceiver() << " !! " << std::endl;
     std::cout << "Sent by: " << message.getSender() << " to " << message.getReceiver() << std::endl;
     std::cout << "Content: " << message.getText() << std::endl;
 }
