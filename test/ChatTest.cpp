@@ -24,13 +24,6 @@ TEST(ChatTest, GetterSetter) {
 }
 
 TEST(ChatTest, Exceptions) {
-    try {
-        c.readMessage(4);
-    }
-    catch (std::out_of_range const& e) {
-        ASSERT_EQ(e.what(), 'Out of range');
-    }
-    catch (...) {
-        FAIL();
-    }
+    EXPECT_THROW(c.readMessage(4), std::out_of_range);
+
 }

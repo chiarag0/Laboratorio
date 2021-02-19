@@ -26,14 +26,14 @@ public:
 
     std::shared_ptr<Chat> getChat(std::string c);
 
-    auto getChats() const {
+    std::map<std::string, std::shared_ptr<Chat>> getChats() const {
         return chats;
     }
 
     virtual ~User();
 
 private:
-    std::map<std::string, std::shared_ptr<Chat> > chats;
+    std::map<std::string, std::shared_ptr<Chat>> chats;
     std::string name;
 };
 
