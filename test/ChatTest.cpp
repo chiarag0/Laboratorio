@@ -9,7 +9,9 @@ User user1("Marco");
 User user2("Luca");
 Message m1("Marco", "Luca", "Hey!");
 Message m2("Luca","Marco","Ciao!");
+Message m3("Irene", "Francesco", "Buongiorno!" );
 Chat c ("Marco", "Luca");
+
 
 TEST(ChatTest, GetterSetter) {
     ASSERT_EQ(c.getFirstName(), "Marco");
@@ -23,7 +25,8 @@ TEST(ChatTest, GetterSetter) {
     c.getUnread();
 }
 
-TEST(ChatTest, Exceptions) {
+TEST(ChatTest, Exception) {
     EXPECT_THROW(c.readMessage(4), std::out_of_range);
-
+    EXPECT_THROW(c.addMessage(m3), std::runtime_error);
 }
+

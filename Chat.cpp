@@ -39,6 +39,8 @@ void Chat::addMessage(Message &m) {
         messages.push_back(m);
         this->notify();
     }
+    else
+        throw std::runtime_error("This message doesn't belong to this chat.");
 }
 
 void Chat::readMessage(int i) {
