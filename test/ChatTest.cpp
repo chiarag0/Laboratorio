@@ -15,14 +15,14 @@ Chat c ("Marco", "Luca");
 
 TEST(ChatTest, GetterSetter) {
     ASSERT_EQ(c.getFirstName(), "Marco");
-    c.setFirstName("Lorenzo");
-    ASSERT_EQ(c.getFirstName(), "Lorenzo");
     ASSERT_EQ(c.getSecondName(), "Luca");
-    c.setSecondName("Edoardo");
-    ASSERT_EQ(c.getSecondName(), "Edoardo");
     c.addMessage(m1);
     c.addMessage(m2);
     c.getUnread();
+    c.setFirstName("Lorenzo");
+    ASSERT_EQ(c.getFirstName(), "Lorenzo");
+    c.setSecondName("Edoardo");
+    ASSERT_EQ(c.getSecondName(), "Edoardo");
 }
 
 TEST(ChatTest, Exception) {

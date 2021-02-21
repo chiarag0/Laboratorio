@@ -13,6 +13,7 @@ int main() {
     Message message1("Marco", "Luca", "Hello, how are you?");
     Message message2("Luca", "Marco", "Hey! It's all ok, what about you?");
     Message message3("Marco", "Luca", "I'm doing great, thank you!");
+    Message message4("Irene", "Francesco", "Buongiorno!" );
 
     chat->addMessage(message1);
 
@@ -31,6 +32,13 @@ int main() {
     }
     catch (std::out_of_range &e) {
         std::cerr << "Out of range error. This mail doesn't exist." << std::endl;
+    }
+
+    try {
+        chat->addMessage(message4);
+    }
+    catch (std::runtime_error &e) {
+        std::cerr << e.what() << std::endl;
     }
 
 }
